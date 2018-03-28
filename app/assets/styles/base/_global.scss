@@ -15,35 +15,14 @@ html {
 
     font-size: 62.5%;
 
-    @include respond(tab-land) {
-
-        font-size: 56.25%;
-
-    }
-
-    @include respond(tab-port) {
-
-        font-size: 50%;
-
-    }
-
-    @include respond(lg-desktop) {
-
-        font-size: 75%;
-
-    }
-
 }
 
 body {
 
     box-sizing: border-box;
-    padding: 3rem;
-
-    @include respond(tab-port) {
-
-        padding: 0;
-
-    }
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 
 }
