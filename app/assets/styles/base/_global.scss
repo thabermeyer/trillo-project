@@ -26,3 +26,15 @@ body {
     min-height: 100vh;
 
 }
+
+.container {
+
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-gray-light-2);
+    box-shadow: var(--shadow-dark);
+
+    //for testing only
+    min-height: 50rem;
+
+}
