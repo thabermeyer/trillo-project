@@ -1,0 +1,76 @@
+.search {
+    
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center; // centers along cross-axis
+    justify-content: center; // centers along main-axis
+
+    &__input {
+
+        font-family: inherit;
+        font-size: inherit; // inherited from the _header layout, since it's the parent element
+        color: inherit;
+        background-color: var(--color-gray-light-2);
+        border: none;
+        border-radius: 10rem;
+        padding: .7rem 2rem;
+        margin-right: -3.25rem;
+        width: 90%;
+        transition: all .2s;
+
+        &:focus {
+
+            outline: none;
+            background-color: var(--color-gray-light-3);
+            width: 100%;
+
+        }
+
+        &::-webkit-input-placeholder {
+
+            font-weight: 100;
+            color: var(--color-gray-light-4);
+
+        }
+
+    }
+
+    /* when the input is focused on, its child (the button) has this happen to it */
+
+    &__input:focus + &__button { 
+
+        background-color: var(--color-gray-light-3);
+
+    }
+
+    &__button {
+
+        border: none;
+        background-color: var(--color-gray-light-2);
+
+        &:focus {
+
+            outline: none;
+
+        }
+
+        /* this creates the effect of the button being "pushed down" when you click on it */
+
+        &:active {
+
+            transform: translateY(.2rem);
+
+        }
+
+    }
+
+    &__icon {
+
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-gray-dark-3);
+
+    }
+
+}

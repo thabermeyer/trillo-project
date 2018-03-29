@@ -1,0 +1,71 @@
+.user-nav {
+
+    display: flex; // creates a flex container and puts the three items side-by-side
+    align-items: center;
+    align-self: stretch; // makes it so each of the items in the container fill the whole given space
+
+    /* this selects only the direct children of .user-nav (three total) */
+
+    & > * {
+
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%; // fixes the issue you see when you hover and the color changes only for size of the icon
+
+        /* this vertically centers the icons and user picture within their container */
+
+        display: flex;
+        align-items: center;
+
+    }
+
+    & > *:hover {
+
+        background-color: var(--color-gray-light-2);
+
+    }
+
+    &__icon-box {
+
+        position: relative;
+
+    }
+
+    &__icon {
+
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-gray-dark-2); // this is how you change the color of the icon
+        
+    }
+
+    &__notification {
+
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+
+        /* this centers the notification number both horizontally (justify) and vertically (align) */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    &__user-photo {
+
+        height: 3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+
+    }
+
+}

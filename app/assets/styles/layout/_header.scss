@@ -1,7 +1,19 @@
 .header {
 
+    font-size: 1.4rem;
     height: 7rem;
     background-color: var(--color-white);
     border-bottom: var(--color-gray-light-2);
+    
+    display: flex;
+    justify-content: space-between; // aligns the three children of .header at the left, center, and right positions
+    align-items: center;
+
+    &__logo {
+
+        height: 3.25rem;
+        margin-left: 2rem;
+
+    }
 
 }
