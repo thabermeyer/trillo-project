@@ -4,4 +4,17 @@
 
     flex: 0 0 18%; // will not grow nor shrink (0 0) but take 18% of the available space
 
+    display: flex;
+    flex-direction: column; // this changes the direction of the main axis from left/right to top/bottom
+    justify-content: space-between; // because you changed the flex-direction to column, this works top/bottom now
+
+}
+
+.legal {
+
+    font-size: 1.2rem;
+    color: var(--color-gray-light-4);
+    text-align: center;
+    padding: 2.5rem;
+
 }
