@@ -3,3 +3,31 @@
     display: flex;
 
 }
+
+.detail {
+
+    display: flex;
+    padding: 4.5rem; // same as the margin-right in the .description, meaning all the whitespace within/without the detail div are the same
+    background-color: var(--color-gray-light-1);
+    border-bottom: var(--line);
+
+}
+
+.description {
+
+    font-size: 1.4rem;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%; // takes 60% of the available space
+    margin-right: 4.5rem;
+
+}
+
+
+.user-reviews {
+
+    background-color: yellowgreen;
+    flex: 1; // takes the remaining space leftover from the description div
+
+}

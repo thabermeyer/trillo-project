@@ -6,3 +6,52 @@ body {
     color: var(--color-gray-dark-2);
 
 }
+
+.paragraph {
+
+
+    /* last-of-type is preferable to last-child here because the last child applies to all children of parent element, regardless of element type */
+
+    &:not(:last-of-type) {
+
+        margin-bottom: 2rem;
+
+    }
+
+}
+
+.list {
+
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+
+        flex: 0 0 50%; // this, combined with flex-wrap above, creates two columns of list items, each with 50% of the available container space
+        margin-bottom: .7rem;
+
+    }
+
+    &__item::before {
+
+        content: "";
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        margin-right: .7rem;
+
+
+        background-image: url('../../assets/images/icons/chevron-thin-right.svg');
+        background-size: cover;
+
+        
+
+    }
+
+}

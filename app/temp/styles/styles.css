@@ -11,7 +11,9 @@
   --color-gray-dark-3: #999;
   --color-white: #fff;
   --color-black: #000;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3); }
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+  --line: .1rem solid var(--color-gray-light-2); }
 
 *,
 *::after,
@@ -83,6 +85,40 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-gray-dark-2); }
+
+.paragraph {
+  /* last-of-type is preferable to last-child here because the last child applies to all children of parent element, regardless of element type */ }
+  .paragraph:not(:last-of-type) {
+    margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .list__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-right: .7rem;
+    background-image: url("../../assets/images/icons/chevron-thin-right.svg");
+    -webkit-background-size: cover;
+            background-size: cover; }
 
 .search {
   -webkit-box-flex: 0;
@@ -266,7 +302,7 @@ body {
     display: block; }
 
 .overview {
-  border-bottom: 0.1rem solid var(--color-gray-light-2);
+  border-bottom: var(--line);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -356,7 +392,7 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   background-color: var(--color-white);
-  border-bottom: 0.1rem solid var(--color-gray-light-2);
+  border-bottom: var(--line);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -378,6 +414,34 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+.detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-gray-light-1);
+  border-bottom: var(--line); }
+
+.description {
+  font-size: 1.4rem;
+  background-color: var(--color-white);
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  padding: 3rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60%;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  margin-right: 4.5rem; }
+
+.user-reviews {
+  background-color: yellowgreen;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .sidebar {
   background-color: var(--color-gray-dark-1);
@@ -410,5 +474,4 @@ body {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1;
-  height: 80rem; }
+          flex: 1; }

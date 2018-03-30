@@ -3,7 +3,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: var(--color-white);
-    border-bottom: .1rem solid var(--color-gray-light-2);
+    border-bottom: var(--line);
     
     display: flex;
     justify-content: space-between; // aligns the three children of .header at the left, center, and right positions

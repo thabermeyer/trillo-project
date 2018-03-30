@@ -16,7 +16,10 @@
     --color-white: #fff;
     --color-black: #000;
 
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
     --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+
+    --line: .1rem solid var(--color-gray-light-2);
 
 }
 
