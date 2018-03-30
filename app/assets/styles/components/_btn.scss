@@ -1,0 +1,30 @@
+.btn {
+
+    &-inline {
+
+        border: none;
+        color: var(--color-primary);
+        font-size: inherit; // takes its parent element's font size, making it more modular across usage
+        border-bottom: .1rem solid currentColor;
+        padding-bottom: .2rem;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+
+            color: var(--color-gray-dark-1);
+
+        }
+
+        &:focus {
+
+            outline: none;
+            animation: pulsate 1s infinite;
+
+        }
+
+    }
+
+}

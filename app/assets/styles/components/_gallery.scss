@@ -1,0 +1,12 @@
+.gallery {
+
+    display: flex;
+
+    &__photo {
+
+        width: 100%; // defined in percentages to keep the image size fluid
+        display: block;
+
+    }
+
+}

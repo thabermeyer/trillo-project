@@ -1,0 +1,78 @@
+.overview {
+
+    border-bottom: .1rem solid var(--color-gray-light-2);
+
+    display: flex;
+    align-items: center;
+
+    &__heading {
+
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        padding: 1.5rem 3rem;
+
+    }
+
+    &__stars {
+
+        margin-right: auto; // this does the same thing as flex: 1 except __stars is contained within its content, not taking up the entirety of the available space
+        display: flex; // removes the extra spacing below each of the children (i.e., star icons), which is needed for perfect vertical alignment
+
+    }
+
+    &__icon-star, &__icon-location {
+
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+
+    }
+
+    &__location {
+
+        font-size: 1.2rem;
+
+        display: flex;
+        vertical-align: center;
+
+    }
+
+    &__icon-location {
+
+        margin-right: .5rem;
+
+    }
+
+    &__rating {
+
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        margin-left: 3rem;
+        padding: 0 2.25rem;
+        align-self: stretch;
+
+        display: flex;
+        flex-direction: column; // changes the two children so they are stacked top to bottom instead of aligned left to right
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__rating-average {
+
+        font-size: 2.25rem;
+        font-weight: 300;
+        margin-bottom: -.3rem;
+
+    }
+
+    &__rating-count {
+
+        font-size: .8rem;
+        text-transform: uppercase;
+
+    }
+
+}
