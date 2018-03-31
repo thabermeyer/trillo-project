@@ -113,12 +113,15 @@ body {
   .list__item::before {
     content: "";
     display: inline-block;
-    height: 2rem;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
     margin-right: .7rem;
-    background-image: url("../../assets/images/icons/chevron-thin-right.svg");
-    -webkit-background-size: cover;
-            background-size: cover; }
+    /* this effect is similar to clip-path. you asign a background color, which applies to the block it occupies, but the mask-image property makes it so it's only visible within the image. We do this because we couldn't color these SVG icons in this way otherwise */
+    background-color: var(--color-primary);
+    -webkit-mask-image: url("../../assets/images/icons/chevron-thin-right.svg");
+            mask-image: url("../../assets/images/icons/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
+            mask-size: cover; }
 
 .search {
   -webkit-box-flex: 0;
@@ -442,6 +445,30 @@ body {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-gray-dark-3);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    height: 4rem;
+    width: 4rem;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 0.3rem solid var(--color-white);
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
 
 .sidebar {
   background-color: var(--color-gray-dark-1);

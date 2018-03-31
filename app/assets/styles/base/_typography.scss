@@ -42,15 +42,15 @@ body {
 
         content: "";
         display: inline-block;
-        height: 2rem;
-        width: 2rem;
+        height: 1rem;
+        width: 1rem;
         margin-right: .7rem;
 
+        /* this effect is similar to clip-path. you asign a background color, which applies to the block it occupies, but the mask-image property makes it so it's only visible within the image. We do this because we couldn't color these SVG icons in this way otherwise */
 
-        background-image: url('../../assets/images/icons/chevron-thin-right.svg');
-        background-size: cover;
-
-        
+        background-color: var(--color-primary);
+        mask-image: url('../../assets/images/icons/chevron-thin-right.svg');
+        mask-size: cover;
 
     }
 

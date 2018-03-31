@@ -24,10 +24,41 @@
 
 }
 
-
 .user-reviews {
 
     background-color: yellowgreen;
     flex: 1; // takes the remaining space leftover from the description div
+
+}
+
+.recommend {
+
+    font-size: 1.3rem;
+    color: var(--color-gray-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+
+        margin-right: auto;
+
+    }
+
+    &__photo {
+
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: .3rem solid var(--color-white);
+        box-sizing: content-box; // this makes is so the border doesn't eat into the height/width of the image
+
+        &:not(:last-child) {
+
+            margin-right: -1.5rem;
+
+        }
+
+    }
 
 }
