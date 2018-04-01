@@ -6,6 +6,8 @@
 
 .detail {
 
+    font-size: 1.4rem; // defined here, its child sections will inherit this font-size
+
     display: flex;
     padding: 4.5rem; // same as the margin-right in the .description, meaning all the whitespace within/without the detail div are the same
     background-color: var(--color-gray-light-1);
@@ -15,7 +17,6 @@
 
 .description {
 
-    font-size: 1.4rem;
     background-color: var(--color-white);
     box-shadow: var(--shadow-light);
     padding: 3rem;
@@ -26,8 +27,11 @@
 
 .user-reviews {
 
-    background-color: yellowgreen;
     flex: 1; // takes the remaining space leftover from the description div
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 

@@ -384,12 +384,80 @@ body {
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s; }
+  .btn-inline span {
+    margin-left: .3rem;
+    -webkit-transition: margin-left .2s;
+    -o-transition: margin-left .2s;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-gray-dark-1); }
+    .btn-inline:hover span {
+      margin-left: .8rem; }
   .btn-inline:focus {
     outline: none;
     -webkit-animation: pulsate 1s infinite;
             animation: pulsate 1s infinite; }
+
+.review {
+  background-color: var(--color-white);
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .review__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10; }
+  .review__user {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem; }
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-gray-dark-3); }
+  .review__rating {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    font-weight: 300; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-gray-light-2);
+    font-family: sans-serif;
+    z-index: 1; }
 
 .header {
   font-size: 1.4rem;
@@ -419,6 +487,7 @@ body {
   display: flex; }
 
 .detail {
+  font-size: 1.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -428,7 +497,6 @@ body {
   border-bottom: var(--line); }
 
 .description {
-  font-size: 1.4rem;
   background-color: var(--color-white);
   -webkit-box-shadow: var(--shadow-light);
           box-shadow: var(--shadow-light);
@@ -440,11 +508,23 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1; }
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .recommend {
   font-size: 1.3rem;

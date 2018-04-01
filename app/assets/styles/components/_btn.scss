@@ -12,9 +12,22 @@
         cursor: pointer;
         transition: all .2s;
 
+        & span {
+
+            margin-left: .3rem;
+            transition: margin-left .2s;
+
+        }
+
         &:hover {
 
             color: var(--color-gray-dark-1);
+
+            & span {
+
+                margin-left: .8rem;
+
+            }
 
         }
 
