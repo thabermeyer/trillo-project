@@ -2,6 +2,12 @@
 
     display: flex;
 
+    @include respond(tab-port) {
+
+        flex-direction: column;
+    
+    }
+
 }
 
 .detail {
@@ -13,6 +19,12 @@
     background-color: var(--color-gray-light-1);
     border-bottom: var(--line);
 
+    @include respond(tab-port) {
+
+        padding: 3rem;
+
+    }
+
 }
 
 .description {
@@ -22,6 +34,13 @@
     padding: 3rem;
     flex: 0 0 60%; // takes 60% of the available space
     margin-right: 4.5rem;
+
+    @include respond(tab-port) {
+
+        padding: 2rem;
+        margin-right: 3rem;
+
+    }
 
 }
 
@@ -49,6 +68,12 @@
 
     }
 
+    &__friends {
+
+        display: flex; // ensures that the pictures will always stay side-by-side regardless of how the browser width is manipulated
+
+    }
+
     &__photo {
 
         height: 4rem;
@@ -59,7 +84,7 @@
 
         &:not(:last-child) {
 
-            margin-right: -1.5rem;
+            margin-right: -2rem;
 
         }
 
@@ -71,6 +96,12 @@
 
     padding: 3.5rem 0;
     text-align: center;
+
+    @include respond(tab-port) {
+
+        padding: 2.5rem 0;
+
+    }
 
     &__book-now {
 

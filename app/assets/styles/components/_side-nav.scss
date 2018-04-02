@@ -4,6 +4,13 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @include respond(tab-port) {
+
+        display: flex;
+        margin: 0;
+
+    }
+
     &__item {
 
         position: relative;
@@ -12,6 +19,18 @@
 
             margin-bottom: .5rem;
 
+            @include respond(tab-port) {
+
+                margin: 0;
+
+            }
+
+        }
+
+        @include respond(tab-port) {
+
+            flex: 1; // gives each flex-item the ability to grow as much as they can within the container, filling the whole row in equal parts
+    
         }
 
     }
@@ -56,6 +75,13 @@
 
         display: flex;
         align-items: center; // vertically aligns its child elements, in this case the icon and the text
+
+        @include respond(tab-port) {
+
+            justify-content: center;
+            padding: 2rem;
+
+        }
 
     }
 

@@ -15,6 +15,24 @@ html {
 
     font-size: 62.5%;
 
+    @include respond(tab-land) {
+
+        font-size: 56.25%;
+
+    }
+
+    @include respond(tab-port) {
+
+        font-size: 50%;
+
+    }
+
+    @include respond(lg-desktop) {
+
+        font-size: 75%;
+
+    }
+
 }
 
 body {
@@ -34,7 +52,10 @@ body {
     background-color: var(--color-gray-light-2);
     box-shadow: var(--shadow-dark);
 
-    // for testing only
-    min-height: 50rem;
+    @include respond(tab-port) {
+
+        margin: 0 auto;
+
+    }
 
 }

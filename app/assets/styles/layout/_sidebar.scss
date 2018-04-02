@@ -17,4 +17,10 @@
     text-align: center;
     padding: 2.5rem;
 
+    @include respond(tab-port) {
+
+        display: none;
+    
+    }
+
 }
