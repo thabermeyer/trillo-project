@@ -6,6 +6,14 @@
     align-items: center; // centers along cross-axis
     justify-content: center; // centers along main-axis
 
+    @include respond(sm-phone) {
+
+        order: 1; // switches the order of the search bar, putting it at the end of the other flex items
+        flex: 0 0 100%; // takes 100% of the container width, which is set to "flex-wrap: wrap," so this makes the search bar occupy a new line
+        background-color: var(--color-gray-light-2);
+
+    }
+
     &__input {
 
         font-family: inherit;

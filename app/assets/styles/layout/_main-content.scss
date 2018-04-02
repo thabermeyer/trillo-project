@@ -25,6 +25,12 @@
 
     }
 
+    @include respond(phone) {
+
+        flex-direction: column;
+
+    }
+
 }
 
 .description {
@@ -39,6 +45,13 @@
 
         padding: 2rem;
         margin-right: 3rem;
+
+    }
+
+    @include respond(phone) {
+
+        margin-right: 0;
+        margin-bottom: 3rem;
 
     }
 

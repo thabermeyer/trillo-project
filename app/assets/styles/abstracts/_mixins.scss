@@ -2,6 +2,7 @@
 
 /*
 
+0 - 500px (31.25em) = Small Phone (I made this up; not necessarily for really small phones)
 0 - 600px (37.5em) = Phone
 600 - 900px (56.25em) = Tablet Portrait
 900 - 1200px (75em) = Tablet Landscape
@@ -27,6 +28,16 @@ $breakpoint Argument Choices
 */
 
 @mixin respond($breakpoint) {
+
+    @if $breakpoint == sm-phone {
+
+        @media (max-width: 31.25em) {
+
+            @content
+
+        }
+
+    };
 
     @if $breakpoint == phone {
 

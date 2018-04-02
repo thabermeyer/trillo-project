@@ -17,6 +17,7 @@
 
 /*
 
+0 - 500px (31.25em) = Small Phone (I made this up; not necessarily for really small phones)
 0 - 600px (37.5em) = Phone
 600 - 900px (56.25em) = Tablet Portrait
 900 - 1200px (75em) = Tablet Landscape
@@ -177,6 +178,17 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   /* when the input is focused on, its child (the button) has this happen to it */ }
+  @media (max-width: 31.25em) {
+    .search {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
+      background-color: var(--color-gray-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -348,11 +360,25 @@ body {
             -ms-flex-pack: center;
                 justify-content: center;
         padding: 2rem; } }
+    @media (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 1.5rem .5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .7rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .gallery {
   display: -webkit-box;
@@ -379,6 +405,10 @@ body {
     text-transform: uppercase;
     letter-spacing: .1rem;
     padding: 1.5rem 3rem; }
+    @media (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: -webkit-box;
@@ -423,13 +453,22 @@ body {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    @media (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -.3rem; }
+    @media (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: .8rem;
     text-transform: uppercase; }
+    @media (max-width: 37.5em) {
+      .overview__rating-count {
+        font-size: .5rem; } }
 
 .btn {
   font-size: 1.5rem;
@@ -583,6 +622,12 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (max-width: 31.25em) {
+    .header {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      height: 11rem; } }
   .header__logo {
     height: 3.25rem;
     margin-left: 2rem; }
@@ -612,6 +657,13 @@ body {
   @media (max-width: 56.25em) {
     .detail {
       padding: 3rem; } }
+  @media (max-width: 37.5em) {
+    .detail {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .description {
   background-color: var(--color-white);
@@ -627,6 +679,10 @@ body {
     .description {
       padding: 2rem;
       margin-right: 3rem; } }
+  @media (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   -webkit-box-flex: 1;
